@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des organisateurs{% endblock %}
+
+{% block body %}
+    <h1>Liste des organisateurs</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Statut</th>
+        </tr>
+        {% for organisateur in organisateurs %}
+            <tr>
+                <td>{{ organisateur.id }}</td>
+                <td>{{ organisateur.nom }}</td>
+                <td>{{ organisateur.status }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
